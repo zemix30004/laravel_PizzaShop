@@ -20,13 +20,13 @@ Route::get('/', function () {
 });*/
 
 Route::get('ingredient', function () {
-     return view('ingredient');
+    return view('ingredient');
 });
 
 
 
 
-/* Route::resource('products', '/Http/Controllers/ProductController');
+// Route::resource('products', '/Http/Controllers/ProductController');
 
 
- Route::get('/ingredient', '/Http/Controllers/ProductController@ingredients');*/
+// Route::get('/ingredient', '/Http/Controllers/ProductController@ingredients');

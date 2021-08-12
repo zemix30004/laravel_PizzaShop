@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        function change(objName, min, max, step) {
+        var obj = document.getElementById(objName);
+        var tmp = +obj.value + step;
+        if (tmp<min) tmp=min;
+        if (tmp>max) tmp=max;
+        obj.value = tmp;
+        }
+        </script>
     <table border="1">
         <tr>
             <td>id</td>
@@ -19,10 +28,10 @@
             <td>is_best offer</td>
             <td>created_at</td>
             <td>updated_at</td>
-          </tr>
+        </tr>
 
-          @foreach($products as $product)
-          <tr>
+        @foreach($products as $product)
+        <tr>
             <td>{{ $product['id'] }}</td>
             <td>{{ $product['title'] }}</td>
             <td>{{ $product['description'] }}</td>
@@ -33,9 +42,13 @@
             <td>{{ $product['is_best offer'] }}</td>
             <td>{{ $product['created_at'] }}</td>
             <td>{{ $product['updated_at'] }}</td>
-          </tr>
-          @endforeach
-      </table>
+        </tr>
+        @endforeach
+    </table>
+
+    <input id="amount" type="text" value="1"/>
+    <input type="button" value="+" onClick="change('amount',0,10, 1);"/>
+
 <span>
     {{ $products->links() }}
 </span>
@@ -47,4 +60,5 @@
 </style>
 
 </body>
+
 </html>
