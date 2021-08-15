@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         //
-       
+
     }
 
     /**
@@ -87,10 +87,20 @@ class ProductController extends Controller
     }
 
 
-    public function ingredient(){
+    // public function ingredient()
+    // {
 
-        return view('ingredient');
+    //     return view('ingredient');
+    // }
+
+    public function product()
+    {
+        return view('product');
     }
-    
 
+    // public function category()
+    // {
+
+    //     return view('category');
+    // }
 }

@@ -6,12 +6,12 @@
     <div class="starter-template">
         @foreach ($categories as $category)
 <div class="panel">
-            <a href="{{ route('category', $category->description) }}">
+            <a href="{{ route('category', $category->code) }}">
                 <img src="">
-                <h2>{{ $category->title }}</h2>
+                <h2>{{ $category->name }}</h2>
             </a>
             <p>
-                В этом разделе вы найдёте самые популярные пиццы по сниженным ценам!
+                {{ $category->description }}
             </p>
         </div>
         @endforeach

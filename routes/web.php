@@ -22,9 +22,9 @@ use App\Http\Controllers\MainController;
 //     return view('welcome');
 // });
 
-Route::get('ingredient', function () {
-    return view('ingredient');
-});
+// Route::get('ingredient', function () {
+//     return view('ingredient');
+// });
 
 
 Route::get('/', 'App\Http\Controllers\MainController@index')->name('index');
@@ -33,11 +33,8 @@ Route::get('/{category}', 'App\Http\Controllers\MainController@category')->name(
 Route::get('/{category}/{product?}', 'App\Http\Controllers\MainController@product')->name('product');
 Route::get('/basket', 'App\Http\Controllers\MainController@basket')->name('basket');
 Route::get('/basket/place', 'App\Http\Controllers\MainController@basketPlace')->name('basket-place');
-
-
-
-
-Route::get('pagination', [Pagination::class, 'products']);
+Route::get('/ingredient', 'App\Http\Controllers\MainController@ingredient')->name('ingredient');
+Route::get('/pagination', [Pagination::class, 'products']);
 
 
 
